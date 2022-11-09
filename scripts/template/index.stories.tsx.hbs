@@ -1,0 +1,31 @@
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import {{componentName}} from '.';
+
+export default {
+  title: 'Example/{{componentName}}',
+  component: {{componentName}},
+} as ComponentMeta<typeof {{componentName}}>;
+
+const Template: ComponentStory<typeof {{componentName}}> = (args) => <{{componentName}} {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  type: 'primary',
+  children: '{{componentName}}',
+};
+
+
+
+export const Basic = () => {
+  return <>
+  <{{componentName}} type="primary">Primary Button</{{componentName}}>
+</>
+}
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  children: '{{componentName}}',
+};
+
